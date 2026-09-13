@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastery Blueprint — Premium E-book</title>
+    <meta
+      name="description"
+      content="A premium playbook to help ambitious professionals build clarity, momentum, and consistent growth."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+            },
+            boxShadow: {
+              glow: '0 10px 30px rgba(56, 189, 248, 0.25)',
+              soft: '0 10px 25px rgba(2, 6, 23, 0.3)'
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      body {
+        background:
+          radial-gradient(circle at 20% -10%, rgba(56, 189, 248, 0.15), transparent 35%),
+          radial-gradient(circle at 90% 10%, rgba(234, 179, 8, 0.1), transparent 30%),
+          #020617;
+      }
+
+      .glass {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(148, 163, 184, 0.22);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="text-slate-100 antialiased">
+    <main>
+      <!-- Hero -->
+      <section class="mx-auto max-w-6xl px-6 pb-14 pt-10 md:pt-16">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div class="fade-in space-y-6">
+            <p class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-200">
+              Premium E-book Launch
+            </p>
+            <h1 class="font-display text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+              Feeling Stuck in Your Growth?
+              <span class="text-cyan-300">Turn Strategy Into Results.</span>
+            </h1>
+            <p class="max-w-xl text-base text-slate-300 md:text-lg">
+              Discover the exact frameworks, systems, and execution playbook used to build momentum fast—without burnout or guesswork.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a
+                href="#pricing"
+                class="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 px-7 py-3 font-semibold text-slate-950 shadow-glow transition duration-300 hover:-translate-y-0.5 hover:from-cyan-300 hover:to-blue-400"
+              >
+                Get Immediate Access
+                <span class="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </a>
+              <p class="text-sm text-slate-400">Instant download • Lifetime updates</p>
+            </div>
+          </div>
+
+          <div class="fade-in mx-auto w-full max-w-md lg:max-w-lg">
+            <div class="relative">
+              <div class="absolute -inset-3 rounded-3xl bg-gradient-to-r from-cyan-500/40 to-amber-400/20 blur-2xl"></div>
+              <img
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80"
+                alt="Premium e-book cover"
+                class="relative w-full rounded-3xl border border-slate-700 object-cover shadow-soft"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social proof -->
+      <section class="border-y border-slate-800/80 bg-slate-900/40">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-6 text-center md:flex-row md:justify-between md:text-left">
+          <p class="fade-in text-sm font-medium text-slate-300">Trusted by <span class="text-cyan-300">5,000+</span> readers worldwide</p>
+          <div class="fade-in flex flex-wrap justify-center gap-3">
+            <span class="rounded-lg border border-slate-700 px-4 py-2 text-xs text-slate-300">Forbes*</span>
+            <span class="rounded-lg border border-slate-700 px-4 py-2 text-xs text-slate-300">TechDaily*</span>
+            <span class="rounded-lg border border-slate-700 px-4 py-2 text-xs text-slate-300">GrowthLab*</span>
+            <span class="rounded-lg border border-slate-700 px-4 py-2 text-xs text-slate-300">Founders Weekly*</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- What's inside -->
+      <section class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div class="fade-in mb-10 text-center">
+          <h2 class="font-display text-3xl font-bold md:text-4xl">What’s Inside the Book</h2>
+          <p class="mx-auto mt-3 max-w-2xl text-slate-300">Actionable chapters designed to move you from confusion to confident execution.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="fade-in glass rounded-2xl p-6 shadow-soft">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-2xl">🧭</div>
+            <h3 class="text-lg font-semibold">Clarity Blueprint</h3>
+            <p class="mt-2 text-sm text-slate-300">A practical system to define goals, priorities, and a winning roadmap in under 60 minutes.</p>
+          </article>
+          <article class="fade-in glass rounded-2xl p-6 shadow-soft">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-2xl">⚙️</div>
+            <h3 class="text-lg font-semibold">Execution Engine</h3>
+            <p class="mt-2 text-sm text-slate-300">Repeatable routines and productivity frameworks to ship high-impact work every week.</p>
+          </article>
+          <article class="fade-in glass rounded-2xl p-6 shadow-soft">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-2xl">📈</div>
+            <h3 class="text-lg font-semibold">Growth Loops</h3>
+            <p class="mt-2 text-sm text-slate-300">How to compound progress using feedback loops, metrics, and strategic iteration.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Author -->
+      <section class="mx-auto max-w-6xl px-6 pb-16">
+        <div class="fade-in glass grid items-center gap-8 rounded-3xl p-8 md:grid-cols-[200px,1fr] md:p-10">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+            alt="Author portrait"
+            class="h-40 w-40 justify-self-center rounded-2xl object-cover"
+          />
+          <div>
+            <h2 class="font-display text-2xl font-bold">Meet Alex Carter</h2>
+            <p class="mt-3 text-slate-300">
+              Alex is a growth strategist who has coached founders, creators, and professionals across 20+ industries. This e-book distills years of proven methods into one practical guide.
+            </p>
+            <p class="mt-5 text-2xl text-cyan-200">— Alex Carter</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="mx-auto max-w-6xl px-6 pb-16">
+        <div class="fade-in mb-10 text-center">
+          <h2 class="font-display text-3xl font-bold md:text-4xl">Reader Testimonials</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <figure class="fade-in glass rounded-2xl p-6">
+            <p class="text-amber-300">★★★★★</p>
+            <blockquote class="mt-3 text-slate-200">“Clear, practical, and deeply motivating. I applied Chapter 2 and doubled my weekly output.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-400">Priya Sharma, Product Lead</figcaption>
+          </figure>
+          <figure class="fade-in glass rounded-2xl p-6">
+            <p class="text-amber-300">★★★★★</p>
+            <blockquote class="mt-3 text-slate-200">“This feels like a private coaching program in book form. Worth every penny.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-400">David Miller, Founder</figcaption>
+          </figure>
+          <figure class="fade-in glass rounded-2xl p-6">
+            <p class="text-amber-300">★★★★★</p>
+            <blockquote class="mt-3 text-slate-200">“Beautifully written and immediately actionable. I got results in the first week.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-400">Noor Ahmed, Marketing Consultant</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="mx-auto max-w-6xl px-6 pb-16">
+        <div class="fade-in mx-auto max-w-xl rounded-3xl border border-cyan-400/35 bg-slate-900/85 p-8 text-center shadow-glow md:p-10">
+          <p class="text-sm font-semibold uppercase tracking-widest text-cyan-300">One-time purchase</p>
+          <h2 class="mt-3 font-display text-3xl font-extrabold md:text-4xl">$29</h2>
+          <p class="mt-2 text-slate-300">Everything you need to start seeing measurable growth.</p>
+          <ul class="mt-6 space-y-3 text-left text-slate-200">
+            <li>✔ Full premium e-book (PDF + EPUB)</li>
+            <li>✔ Bonus action templates</li>
+            <li>✔ Lifetime updates to future editions</li>
+          </ul>
+          <a
+            href="#"
+            class="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-amber-300 to-yellow-400 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:brightness-105"
+          >
+            Buy Now — Secure Checkout
+          </a>
+          <div class="mt-6 flex flex-wrap justify-center gap-2 text-xs text-slate-400">
+            <span class="rounded-md border border-slate-700 px-3 py-1">SSL Secured</span>
+            <span class="rounded-md border border-slate-700 px-3 py-1">Stripe</span>
+            <span class="rounded-md border border-slate-700 px-3 py-1">PayPal</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="mx-auto max-w-4xl px-6 pb-16">
+        <div class="fade-in mb-8 text-center">
+          <h2 class="font-display text-3xl font-bold">Frequently Asked Questions</h2>
+        </div>
+        <div class="space-y-4">
+          <details class="fade-in glass rounded-xl p-5">
+            <summary class="cursor-pointer font-semibold">How will I receive the e-book?</summary>
+            <p class="mt-3 text-sm text-slate-300">Immediately after checkout, you'll receive a download link via email.</p>
+          </details>
+          <details class="fade-in glass rounded-xl p-5">
+            <summary class="cursor-pointer font-semibold">Is this suitable for beginners?</summary>
+            <p class="mt-3 text-sm text-slate-300">Yes. The framework starts from fundamentals and scales to advanced strategies.</p>
+          </details>
+          <details class="fade-in glass rounded-xl p-5">
+            <summary class="cursor-pointer font-semibold">Do I get future updates?</summary>
+            <p class="mt-3 text-sm text-slate-300">Absolutely. Every purchase includes lifetime updates at no additional cost.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950/60">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+        <p>© 2026 Mastery Blueprint. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="mailto:hello@example.com" class="hover:text-slate-200">Contact</a>
+          <a href="#" class="hover:text-slate-200">Terms</a>
+          <a href="#" class="hover:text-slate-200">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Fade-in on scroll using Intersection Observer.
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
