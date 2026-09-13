@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium E-Book Landing Page</title>
+    <meta
+      name="description"
+      content="Transform your results with the premium playbook trusted by 5,000+ readers."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+            },
+            colors: {
+              slateNight: '#0B1120',
+              electric: '#3B82F6',
+              gold: '#F59E0B'
+            },
+            boxShadow: {
+              glow: '0 20px 55px -25px rgba(59,130,246,0.65)'
+            },
+            animation: {
+              float: 'float 5s ease-in-out infinite'
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' }
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      .glass {
+        background: linear-gradient(130deg, rgba(30, 41, 59, 0.65), rgba(15, 23, 42, 0.45));
+        backdrop-filter: blur(14px);
+        border: 1px solid rgba(148, 163, 184, 0.22);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(26px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-slateNight text-slate-100 antialiased selection:bg-electric/25">
+    <main>
+      <!-- Hero section -->
+      <section class="relative overflow-hidden px-6 pt-10 pb-20 sm:px-10 lg:px-16">
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.2),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.18),_transparent_42%)]"></div>
+
+        <header class="mx-auto flex w-full max-w-6xl items-center justify-between pb-10">
+          <a href="#" class="font-display text-lg font-bold tracking-tight">E-Book<span class="text-gold">Pro</span></a>
+          <a
+            href="#pricing"
+            class="rounded-full border border-slate-400/30 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-electric hover:text-electric"
+            >View Offer</a
+          >
+        </header>
+
+        <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center">
+          <div class="fade-in">
+            <p class="mb-4 inline-flex rounded-full border border-electric/40 bg-electric/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-electric">
+              New Premium Edition
+            </p>
+            <h1 class="font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+              Stop Guessing and Build a <span class="text-electric">High-Growth Strategy</span> That Actually Works
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
+              Get the practical framework top creators use to simplify execution, grow faster, and win back focus in 30 days.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#pricing"
+                class="group inline-flex items-center gap-2 rounded-full bg-electric px-7 py-3 text-sm font-semibold text-white shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
+              >
+                Get Immediate Access
+                <span class="transition group-hover:translate-x-0.5">→</span>
+              </a>
+              <a
+                href="#inside"
+                class="inline-flex items-center rounded-full border border-slate-500/35 px-7 py-3 text-sm font-semibold text-slate-100 transition hover:border-gold hover:text-gold"
+                >Preview Chapters</a
+              >
+            </div>
+          </div>
+
+          <div class="fade-in lg:justify-self-end">
+            <div class="glass mx-auto max-w-sm rounded-3xl p-4 shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80"
+                alt="3D premium e-book cover placeholder"
+                class="animate-float w-full rounded-2xl object-cover shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social proof -->
+      <section class="fade-in border-y border-slate-700/60 bg-slate-900/60 px-6 py-5 sm:px-10 lg:px-16">
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">Trusted by 5,000+ readers</p>
+          <div class="flex flex-wrap items-center justify-center gap-8 text-sm font-semibold text-slate-400">
+            <span>Forbes</span>
+            <span>TechCrunch</span>
+            <span>Medium</span>
+            <span>GrowthDaily</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- What's inside -->
+      <section id="inside" class="px-6 py-20 sm:px-10 lg:px-16">
+        <div class="mx-auto max-w-6xl">
+          <div class="fade-in mb-12 text-center">
+            <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">What’s Inside the Book</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-slate-300">Practical frameworks, templates, and decision models you can apply immediately.</p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="fade-in glass rounded-2xl p-6 shadow-xl">
+              <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-electric/20 text-electric">📘</div>
+              <h3 class="text-lg font-semibold text-white">Clarity Blueprint</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-300">Eliminate overwhelm and define a single measurable growth target with precision.</p>
+            </article>
+            <article class="fade-in glass rounded-2xl p-6 shadow-xl">
+              <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gold/20 text-gold">⚙️</div>
+              <h3 class="text-lg font-semibold text-white">Execution System</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-300">A weekly operating framework to ship faster without sacrificing quality or focus.</p>
+            </article>
+            <article class="fade-in glass rounded-2xl p-6 shadow-xl">
+              <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400">📈</div>
+              <h3 class="text-lg font-semibold text-white">Scaling Playbook</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-300">Build repeatable systems, optimize conversion points, and compound long-term growth.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Author section -->
+      <section class="px-6 pb-20 sm:px-10 lg:px-16">
+        <div class="fade-in mx-auto grid max-w-5xl gap-8 rounded-3xl border border-slate-600/40 bg-slate-900/45 p-8 shadow-2xl md:grid-cols-[220px_1fr] md:items-center">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+            alt="Author headshot placeholder"
+            class="h-52 w-52 justify-self-center rounded-2xl object-cover"
+          />
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">About the Author</p>
+            <h2 class="mt-2 font-display text-3xl font-bold text-white">Alex Morgan</h2>
+            <p class="mt-4 text-slate-300">
+              Alex is a product strategist and growth consultant who has helped 120+ businesses improve conversion, positioning, and offer design.
+              This book condenses a decade of practical insights into an actionable roadmap.
+            </p>
+            <p class="mt-6 font-display text-2xl text-gold">Alex Morgan</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="px-6 pb-20 sm:px-10 lg:px-16">
+        <div class="mx-auto max-w-6xl">
+          <div class="fade-in mb-10 text-center">
+            <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">What Readers Are Saying</h2>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="fade-in glass rounded-2xl p-6">
+              <p class="text-gold">★★★★★</p>
+              <p class="mt-3 text-sm text-slate-200">“I made back the cost in one week. The chapter frameworks are concise, practical, and brutally effective.”</p>
+              <p class="mt-4 text-sm font-semibold text-slate-400">Priya R., Startup Founder</p>
+            </article>
+            <article class="fade-in glass rounded-2xl p-6">
+              <p class="text-gold">★★★★★</p>
+              <p class="mt-3 text-sm text-slate-200">“Finally, a no-fluff guide with clear steps. It gave our team immediate structure and confidence.”</p>
+              <p class="mt-4 text-sm font-semibold text-slate-400">Daniel K., Marketing Lead</p>
+            </article>
+            <article class="fade-in glass rounded-2xl p-6">
+              <p class="text-gold">★★★★★</p>
+              <p class="mt-3 text-sm text-slate-200">“Beautifully written and surprisingly tactical. Every chapter delivered one actionable win.”</p>
+              <p class="mt-4 text-sm font-semibold text-slate-400">Sofia M., Consultant</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="px-6 pb-20 sm:px-10 lg:px-16">
+        <div class="fade-in mx-auto max-w-2xl rounded-3xl border border-electric/40 bg-slate-900/75 p-8 text-center shadow-glow">
+          <p class="text-xs uppercase tracking-[0.2em] text-electric">Limited launch offer</p>
+          <h2 class="mt-3 font-display text-4xl font-extrabold text-white">$29</h2>
+          <p class="mt-2 text-slate-300">One-time payment. Lifetime access.</p>
+
+          <ul class="mx-auto mt-8 max-w-md space-y-3 text-left text-sm text-slate-200">
+            <li>✔ Full Premium E-book (PDF + EPUB)</li>
+            <li>✔ Bonus templates and worksheet pack</li>
+            <li>✔ Lifetime updates for future editions</li>
+          </ul>
+
+          <a
+            href="#"
+            class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gold px-7 py-3 text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-amber-300"
+            >Secure My Copy Now</a
+          >
+
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
+            <span>SSL Secure</span>
+            <span>Stripe</span>
+            <span>PayPal</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="px-6 pb-20 sm:px-10 lg:px-16">
+        <div class="mx-auto max-w-4xl">
+          <div class="fade-in mb-10 text-center">
+            <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="space-y-4">
+            <details class="fade-in glass rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-white">How will I receive the e-book?</summary>
+              <p class="mt-3 text-sm text-slate-300">You’ll instantly receive a download link by email right after checkout.</p>
+            </details>
+            <details class="fade-in glass rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-white">Is this suitable for beginners?</summary>
+              <p class="mt-3 text-sm text-slate-300">Yes. The book is structured for both beginners and experienced professionals.</p>
+            </details>
+            <details class="fade-in glass rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-white">Do I get future updates?</summary>
+              <p class="mt-3 text-sm text-slate-300">Absolutely. You’ll get lifetime updates at no extra cost.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-700/70 px-6 py-8 sm:px-10 lg:px-16">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center text-sm text-slate-400 md:flex-row md:text-left">
+        <p>© 2026 E-BookPro. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="mailto:hello@ebookpro.com" class="transition hover:text-electric">Contact</a>
+          <a href="#" class="transition hover:text-electric">Terms of Service</a>
+          <a href="#" class="transition hover:text-electric">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll('.fade-in').forEach(element => observer.observe(element));
+    </script>
+  </body>
+</html>
