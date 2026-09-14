@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookora | Premium Bookstore</title>
+    <meta
+      name="description"
+      content="Bookora is a modern bookstore experience with curated business and science fiction collections."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+            },
+            colors: {
+              blush: '#F9D7E3',
+              petal: '#F7E8EE',
+              rose: '#E88CAD',
+              slateDeep: '#1F2937',
+              slateSoft: '#4B5563'
+            },
+            boxShadow: {
+              soft: '0 18px 45px -28px rgba(232, 140, 173, 0.55)',
+              card: '0 14px 30px -22px rgba(31, 41, 55, 0.35)'
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-white text-slateDeep antialiased">
+    <div class="min-h-screen bg-gradient-to-b from-petal/50 to-white">
+      <!-- 1) Navigation Bar (Header) -->
+      <header class="sticky top-0 z-30 border-b border-gray-200/70 bg-white/90 backdrop-blur-md">
+        <div class="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+          <div class="relative group">
+            <button
+              id="menuButton"
+              aria-label="Open categories menu"
+              class="flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white text-slateDeep shadow-sm transition hover:border-rose/60 hover:bg-petal"
+            >
+              <span class="flex flex-col items-center gap-1">
+                <span class="h-1.5 w-1.5 rounded-full bg-slateDeep"></span>
+                <span class="h-1.5 w-1.5 rounded-full bg-slateDeep"></span>
+                <span class="h-1.5 w-1.5 rounded-full bg-slateDeep"></span>
+              </span>
+            </button>
+
+            <div
+              id="menuDropdown"
+              class="invisible absolute left-0 top-14 w-52 origin-top-left rounded-2xl border border-gray-200 bg-white p-2 opacity-0 shadow-card transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+            >
+              <a class="block rounded-xl px-3 py-2 text-sm text-slateSoft transition hover:bg-petal hover:text-slateDeep" href="#">Business</a>
+              <a class="block rounded-xl px-3 py-2 text-sm text-slateSoft transition hover:bg-petal hover:text-slateDeep" href="#">Science</a>
+              <a class="block rounded-xl px-3 py-2 text-sm text-slateSoft transition hover:bg-petal hover:text-slateDeep" href="#">Novel</a>
+              <a class="block rounded-xl px-3 py-2 text-sm text-slateSoft transition hover:bg-petal hover:text-slateDeep" href="#">Comic</a>
+              <a class="block rounded-xl px-3 py-2 text-sm text-slateSoft transition hover:bg-petal hover:text-slateDeep" href="#">Sci-Fiction</a>
+              <a class="block rounded-xl px-3 py-2 text-sm text-slateSoft transition hover:bg-petal hover:text-slateDeep" href="#">Fiction</a>
+            </div>
+          </div>
+
+          <h1 class="flex-1 text-center font-display text-xl font-extrabold tracking-tight text-slateDeep sm:text-2xl">
+            Bookora
+          </h1>
+
+          <div class="ml-auto flex items-center gap-2 sm:gap-3">
+            <label class="relative block">
+              <span class="sr-only">Search books</span>
+              <input
+                type="search"
+                placeholder="Search books..."
+                class="h-11 w-32 rounded-xl border border-gray-200 bg-white px-3 pr-9 text-sm text-slateDeep outline-none transition focus:border-rose focus:ring-2 focus:ring-rose/20 sm:w-44 sm:px-4 sm:pr-10 md:w-56"
+              />
+              <svg class="pointer-events-none absolute right-3 top-3.5 h-4 w-4 text-slateSoft" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.35-4.35m1.35-5.15A7.5 7.5 0 1 1 3 11.5a7.5 7.5 0 0 1 15 0Z" />
+              </svg>
+            </label>
+
+            <button
+              aria-label="Open cart"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-gray-200 bg-white text-slateDeep shadow-sm transition hover:border-rose/60 hover:bg-petal"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2m0 0L7 13h10l3-8H5.4ZM7 13 5.4 5M7 13l-1.2 2.6a1 1 0 0 0 .91 1.4H19m-11 3a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- 2) Hero Section -->
+        <section class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+          <div>
+            <p class="inline-flex rounded-full border border-rose/40 bg-blush/50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slateSoft">
+              Curated Collection
+            </p>
+            <h2 class="mt-5 font-display text-4xl font-extrabold leading-tight text-slateDeep sm:text-5xl">
+              Best Book Interface
+            </h2>
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-slateSoft sm:text-lg">
+              Discover a premium digital bookstore experience built for speed, trust, and joy. Explore expertly curated shelves with
+              <span class="font-bold text-rose">1000+ Books</span> across business and science fiction.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-8 -top-8 h-24 w-24 rounded-full bg-blush blur-2xl"></div>
+            <div class="absolute -bottom-8 -right-5 h-28 w-28 rounded-full bg-rose/30 blur-2xl"></div>
+
+            <div class="relative grid grid-cols-2 gap-4 rounded-3xl border border-gray-200 bg-white p-4 shadow-soft sm:p-5">
+              <img
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=640&q=80"
+                alt="Stacked books"
+                class="col-span-2 h-40 w-full rounded-2xl object-cover sm:h-48"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=480&q=80"
+                alt="Library shelf"
+                class="h-32 w-full rounded-xl object-cover sm:h-36"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=480&q=80"
+                alt="Open book"
+                class="h-32 w-full rounded-xl object-cover sm:h-36"
+              />
+
+              <div class="absolute right-5 top-5 rounded-full border border-rose/50 bg-white/95 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-rose shadow-card">
+                1000+ Books
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3) Types of Books (Product Section) -->
+        <section class="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+          <div class="mb-8 flex flex-wrap items-center justify-between gap-3">
+            <h3 class="font-display text-3xl font-bold text-slateDeep">Types of Books</h3>
+            <p class="text-sm font-medium text-slateSoft">Business Books &amp; Science Fiction</p>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=500&q=80" alt="Good to Great book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">Good to Great</h4>
+              <p class="mt-1 text-sm text-slateSoft">Business Books</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=500&q=80" alt="Trading in the Zone book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">Trading in the Zone</h4>
+              <p class="mt-1 text-sm text-slateSoft">Business Books</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=500&q=80" alt="Dark Matter book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">Dark Matter</h4>
+              <p class="mt-1 text-sm text-slateSoft">Science Fiction</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=500&q=80" alt="Atomic Habits book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">Atomic Habits</h4>
+              <p class="mt-1 text-sm text-slateSoft">Business Books</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=500&q=80" alt="Dune book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">Dune</h4>
+              <p class="mt-1 text-sm text-slateSoft">Science Fiction</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=500&q=80" alt="Project Hail Mary book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">Project Hail Mary</h4>
+              <p class="mt-1 text-sm text-slateSoft">Science Fiction</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7?auto=format&fit=crop&w=500&q=80" alt="The Lean Startup book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">The Lean Startup</h4>
+              <p class="mt-1 text-sm text-slateSoft">Business Books</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+
+            <article class="rounded-2xl border border-gray-200 bg-white p-4 shadow-card transition hover:-translate-y-1 hover:border-rose/60 hover:shadow-soft">
+              <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=500&q=80" alt="Neuromancer book cover placeholder" class="h-52 w-full rounded-xl object-cover" />
+              <h4 class="mt-4 font-semibold text-slateDeep">Neuromancer</h4>
+              <p class="mt-1 text-sm text-slateSoft">Science Fiction</p>
+              <p class="mt-4 text-lg font-extrabold text-rose">₹49</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- 4) About Us Section (Footer/Bottom) -->
+      <footer class="border-t border-gray-200 bg-petal/70">
+        <section class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:px-8">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slateSoft">About Us</p>
+            <h5 class="mt-3 font-display text-3xl font-bold text-slateDeep">Professional Book Commerce, Built for Every Reader</h5>
+            <p class="mt-5 max-w-2xl text-sm leading-relaxed text-slateSoft sm:text-base">
+              At Bookora, our vision is to make premium reading accessible and affordable for everyone. We combine trusted curation,
+              transparent pricing, and a clean digital buying experience to help individuals, students, and professionals access books that
+              elevate knowledge and long-term growth.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-card">
+            <h6 class="text-sm font-bold uppercase tracking-wider text-slateDeep">Quick Links</h6>
+            <nav class="mt-4 space-y-3 text-sm">
+              <a href="mailto:contact@bookora.com" class="block text-slateSoft transition hover:text-rose">Contact</a>
+              <a href="#" class="block text-slateSoft transition hover:text-rose">Privacy</a>
+              <a href="#" class="block text-slateSoft transition hover:text-rose">Terms</a>
+            </nav>
+          </div>
+        </section>
+
+        <div class="border-t border-gray-200 py-4 text-center text-xs text-slateSoft">
+          © 2026 Bookora. All rights reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuButton = document.getElementById('menuButton');
+      const menuDropdown = document.getElementById('menuDropdown');
+
+      menuButton.addEventListener('click', () => {
+        menuDropdown.classList.toggle('visible');
+        menuDropdown.classList.toggle('opacity-100');
+        menuDropdown.classList.toggle('invisible');
+        menuDropdown.classList.toggle('opacity-0');
+      });
+
+      document.addEventListener('click', event => {
+        if (!menuButton.contains(event.target) && !menuDropdown.contains(event.target)) {
+          menuDropdown.classList.add('invisible', 'opacity-0');
+          menuDropdown.classList.remove('visible', 'opacity-100');
+        }
+      });
+    </script>
+  </body>
+</html>
